@@ -21,7 +21,7 @@ import {
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function App() {
-  
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -91,8 +91,8 @@ export default function App() {
                 Derecho Laboral, Seguridad Social y Extranjería
               </h1>
               <p className="mb-8 md:mb-10 max-w-lg border-l-2 border-accent pl-6 text-sm leading-relaxed text-gray-600">
-                Para personas trabajadoras, empresas y personas extranjeras. 
-            <br/>Soluciones claras, eficaces y adaptadas a cada caso.
+                Para personas trabajadoras, empresas y personas extranjeras.
+                <br />Soluciones claras, eficaces y adaptadas a cada caso.
               </p>
 
               <div className="mb-10 md:mb-12 space-y-4 md:space-y-5 text-justify">
@@ -305,14 +305,15 @@ export default function App() {
                   </div>
                 </div>
 
-                 <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4">
                   <MapPin className="mt-1 h-5 w-5 text-accent" />
                   <div>
                     <p className="text-[10px] font-bold tracking-widest uppercase text-gray-400">Horario</p>
-                    <p className="text-sm font-semibold text-primary">De Lunes a Viernes <br />
-                      De 9:00 - 14:00 horas</p> <br />
-                      Fuera de horario, atiendo bajo cita previa. <br />
-                      Si tiene una urgencia, llame o envíe Whats App.
+                    <p className="text-sm font-semibold text-primary">De Lunes a Viernes</p>
+                    <p className="text-sm text-gray-700">9:00 a 14:00 horas</p>
+                    <br />
+                    <p className="text-sm text-gray-700">📌 Fuera de horario, atiendo bajo cita previa.</p>
+                    <p className="text-sm text-gray-700">🚨 Si tiene una urgencia, llame o envíe WhatsApp.</p>
                   </div>
                 </div>
 
@@ -379,15 +380,15 @@ export default function App() {
             </div>
             <div className="flex gap-10">
               <a href="#" className="hover:text-accent transition-colors">Aviso Legal</a>
-         
-      <a 
-  href="/imagine-asesoramiento/politica.html" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  className="text-gray-400 hover:text-[#D4AF37] text-[10px]"
->
-  Política de Privacidad
-</a>
+
+              <a
+                href="/imagine-asesoramiento/politica.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-[#D4AF37] text-[10px]"
+              >
+                Política de Privacidad
+              </a>
             </div>
             <p>© 2026 imAGine by Ana. Todos los derechos reservados</p>
           </div>
