@@ -27,29 +27,45 @@ export default function App() {
   return (
     <div id="app-container" className="min-h-screen bg-white font-sans text-primary">
       {/* Navbar */}
-      <nav id="navbar" className="fixed top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-10 py-4">
-          <div className="flex items-center gap-2 md:gap-3">
-            <div className="flex h-10 w-23 items-center justify-center rounded bg-primary">
-              <span className="font-serif text-xl font-bold text-accent">ImAGine</span>
 
-            </div>
-            <h1>by Ana Giráldez</h1>
-          </div>
+   {/* Navbar */}
+<nav id="navbar" className="fixed top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-10 py-4">
+    
+    {/* Contenedor del Logo e Identidad */}
+    <div className="flex items-center gap-3 md:gap-4">
+      {/* El Logo Pequeño */}
+      <img 
+        src="logo.png" 
+        alt="Logo imAGine" 
+        className="h-25 w-auto object-contain" 
+      />
+      
+      {/* Texto de Marca */}
+      <div className="flex flex-col leading-none">
+        <span className="font-serif text-xl md:text-2xl font-bold tracking-tighter text-primary">
+          Im<span className="text-accent">AG</span>ine
+        </span>
+        <h1 className="text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase text-gray-400">
+          by Ana Giráldez
+        </h1>
+      </div>
+    </div>
 
-          <div className="hidden items-center gap-10 text-[11px] font-bold tracking-[0.2em] uppercase md:flex">
-            <a href="#hero" className="text-accent hover:text-accent-hover transition-colors">Inicio</a>
-            <a href="#beneficios" className="text-primary hover:text-accent transition-colors">Servicios</a>
-            <a href="#testimonios" className="text-primary hover:text-accent transition-colors">Experiencia</a>
-            <a href="#contacto" className="border-b-2 border-accent pb-1 text-primary hover:text-accent transition-all">
-              Contacto
-            </a>
-          </div>
+    {/* Menú Desktop */}
+    <div className="hidden items-center gap-10 text-[11px] font-bold tracking-[0.2em] uppercase md:flex">
+      <a href="#hero" className="text-accent hover:text-accent-hover transition-colors">Inicio</a>
+      <a href="#beneficios" className="text-primary hover:text-accent transition-colors">Servicios</a>
+      <a href="#testimonios" className="text-primary hover:text-accent transition-colors">Experiencia</a>
+      <a href="#contacto" className="border-b-2 border-accent pb-1 text-primary hover:text-accent transition-all">
+        Contacto
+      </a>
+    </div>
 
-          <button className="md:hidden text-primary" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X /> : <Menu />}
-          </button>
-        </div>
+    <button className="md:hidden text-primary" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+      {isMenuOpen ? <X /> : <Menu />}
+    </button>
+  </div>
 
         {/* Mobile Menu */}
         <AnimatePresence>
@@ -112,7 +128,7 @@ export default function App() {
                 href="https://wa.me/34613032762?text=Hola,%20me%20gustaría%20solicitar%20una%20consulta%20personalizada."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-25 mt-12 md:mt-18 w-max bg-[#25D366] px-8 md:px-10 py-4 md:py-5 text-[10px] md:text-[14px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#B8860B] hover:shadow-2xl active:scale-95"
+                className="ml-16 mt-12 md:mt-18 w-max bg-[#25D366] px-8 md:px-10 py-4 md:py-5 text-[10px] md:text-[14px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#B8860B] hover:shadow-2xl active:scale-95"
               >
                 Solicite su consulta
               </a>
@@ -138,11 +154,11 @@ export default function App() {
               <div className="mt-6 md:mt-8 w-full bg-white p-6 md:p-8 border border-gray-100 shadow-sm">
                 <div className="mb-3 md:mb-4 flex items-center gap-3 md:gap-4">
                   <div className="h-px w-8 md:w-10 bg-accent opacity-50" />
-                  <span className="text-[9px] md:text-[10px] font-bold tracking-[0.3em] uppercase text-accent">Su Asesora de Confianza</span>
+                  <span className="text-[9px] md:text-[10px] font-bold tracking-[0.3em] uppercase text-accent">Detrás de ImAGine</span>
                 </div>
                 <p className="text-[12.5px] md:text-[13.5px] font-medium leading-[1.6] md:leading-[1.8] text-gray-600 italic text-justify">
 
-                  <p>Soy Graduada Social especializada en Derecho Laboral, Seguridad Social y Extranjería.
+                  <p>Soy Ana Giráldez, Graduada Social especializada en Derecho Laboral, Seguridad Social y Extranjería.
                     Mi práctica profesional abarca la intervención en procedimientos de despido, sanciones,
                     reclamaciones de cantidad, tutela de derechos fundamentales, daños y perjuicios o denuncias ante la Inspección de Trabajo.
                     Asimismo, cuento con experiencia en trámites en materia de la Seguridad Social
@@ -167,17 +183,18 @@ export default function App() {
               {
                 id: "01.",
                 title: "Derecho Laboral",
-                desc: "Defensa en materia despidos, sanciones, reclamaciones de cantidad, etc."
+                desc: "Defensa en Materia de Despidos, Impugnación de Sanciones, Reclamaciones de Cantidad (Salarios, Horas Extras y Pluses), Acoso Laboral (Mobbing), Conciliación de la vida Personal, Familiar y Laboral, Vacaciones, Convenios Colectivos, Permisos, Modificaciones Sustanciales de Condiciones de Trabajo, Movilidad Geográfica, Teletrabajo, Representantes Legales de las Personas Trabajadoras, Vulneración de Derechos Fundamentales, etc."
               },
+              
               {
                 id: "02.",
                 title: "Seguridad Social",
-                desc: "Tramitación de pensiones e incapacidades gestionadas con éxito ante la administración."
+                desc: "Impugnación de Altas Médicas, Reconocimiento de Incapacidad Permanente (Parcial,Total, Absoluta y Gran Invalidez), Determinación de Contingencia, Pensiones de Jubilación, Viudedad, Orfandad y Pensión a Favor de Familiares, Subsidios, Desempleo, Complemento Brecha Género, Reclamación Daños y Perjuicios, Nacimiento y Cuidado Menor, Riesgo durante Embarazo y Lactancia, Permisos Cuidado y Conciliación, Prestación Cuidado Menores con Cáncer o Enfermedad Grave, etc.  "
               },
               {
                 id: "03.",
                 title: "Extranjería",
-                desc: "Soluciones ágiles en residencia, nacionalidad y regularización, eliminando la complejidad burocrática."
+                desc: "REGULARIZACIÓN EXTRAORDINARIA 2026 (¡PLAZO ABIERTO HASTA EL 30 DE JUNIO!), Autorizaciones de Trabajo y Estancia, Residencia de Larga Duración, Residencia no Lucrativa, Familiar de Ciudadano de la UE, Nacionalidad, Reagrupación Familiar, Gestión de Arraigos (Social, Familiar, Laboral y para la Formación), Residencias por Circunstancias Excepcionales (Asilo y Razones Humanitarias),  "
               }
             ].map((benefit, idx) => (
               <motion.div
@@ -187,10 +204,10 @@ export default function App() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="mb-4 font-serif text-3xl italic text-accent opacity-50">{benefit.id}</div>
-                <h3 className="mb-4 text-xs font-bold tracking-[0.2em] uppercase text-primary">{benefit.title}</h3>
+                <div className="mb-4 font-serif text-4xl italic text-accent opacity-50">{benefit.id}</div>
+                <h3 className="mb-4 text-s font-bold tracking-[0.2em] uppercase text-primary">{benefit.title}</h3>
                 <div className="mx-auto mb-6 h-px w-10 bg-accent/30" />
-                <p className="text-[13px] leading-relaxed text-gray-500">{benefit.desc}</p>
+                <p className="text-[15px] leading-relaxed text-gray-500">{benefit.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -198,9 +215,9 @@ export default function App() {
           <div className="text-center">
             <a
               href="#contacto"
-              className="inline-block bg-[#D4AF37] px-10 py-4 text-[11px] font-bold tracking-widest uppercase text-primary transition-all hover:bg-primary hover:text-white"
+              className="inline-block bg-[#D4AF37] px-10 py-4 text-[15px] font-bold tracking-widest uppercase text-primary transition-all hover:bg-primary hover:text-white"
             >
-              Consultar servicios detallados
+              ¿No encuentra lo que busca? Envíe su duda.
             </a>
           </div>
         </div>
@@ -210,20 +227,11 @@ export default function App() {
       <section id="authority" className="bg-primary py-12">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="flex flex-wrap items-center justify-center gap-10 md:gap-24">
-            <div className="flex items-center gap-4">
-              <span className="font-serif text-4xl font-bold text-accent">95%</span>
-              <div className="h-8 w-px bg-white/20" />
-              <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-white/70">Casos<br />resueltos favorablemente</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <span className="font-serif text-4xl font-bold text-accent">+100</span>
-              <div className="h-8 w-px bg-white/20" />
-              <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-white/70">Clientes<br />atendidos</span>
-            </div>
+          
             <div className="flex items-center gap-4">
               <span className="font-serif text-4xl font-bold text-accent">☎️</span>
               <div className="h-8 w-px bg-white/20" />
-              <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-white/70">Atención<br />urgente</span>
+              <span className="text-[15px] font-medium tracking-[0.2em] uppercase text-white/70">Atención urgente</span>
             </div>
           </div>
         </div>
@@ -233,7 +241,7 @@ export default function App() {
       <section id="testimonios" className="bg-[#F9F9F9] py-20 md:py-24">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="mb-16 md:mb-20 text-center">
-            <h2 className="mb-4 font-serif text-3xl font-bold text-primary">Clientes contentos 🙂</h2>
+            <h2 className="mb-4 font-serif text-3xl font-bold text-primary"> Valoraciones de clientes 🙂</h2>
             <div className="mx-auto h-0.5 w-12 bg-accent" />
           </div>
 
@@ -278,7 +286,7 @@ export default function App() {
             <div>
               <div className="mb-4 text-[10px] md:text-[11px] font-bold tracking-[0.3em] uppercase text-accent">Contacto</div>
               <h2 className="mb-6 md:mb-8 font-serif text-3xl md:text-4xl font-bold text-primary">Inicio su defensa</h2>
-              <p className="mb-10 md:mb-12 text-sm leading-relaxed text-gray-500">Cada caso es único y merece una atención personalizada. Póngase en contacto para evaluar su situación jurídica con total confidencialidad.</p>
+              <p className="text-justify mb-10 md:mb-12 text-sm leading-relaxed text-gray-500">Cada caso es único y merece una atención personalizada. Póngase en contacto para evaluar su situación jurídica con total confidencialidad.</p>
 
               <div className="space-y-6 md:space-y-8">
                 <div className="flex items-start gap-4">
@@ -312,11 +320,10 @@ export default function App() {
                     <p className="text-sm font-semibold text-primary">De Lunes a Viernes</p>
                     <p className="text-sm text-gray-700">9:00 a 14:00 horas</p>
                     <br />
-                    <p className="text-sm text-gray-700">📌 Fuera de horario, atiendo bajo cita previa.</p>
-                    <p className="text-sm text-gray-700">🚨 Si tiene una urgencia, llame o envíe WhatsApp.</p>
+                    <p className="text-sm text-gray-700">🚨 Fuera de horario, atiendo bajo cita previa.</p>
+                    <p className="text-sm text-gray-700">📞 Si tiene una urgencia, llame o envíe WhatsApp.</p>
                   </div>
                 </div>
-
               </div>
             </div>
 
@@ -333,7 +340,7 @@ export default function App() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label className="text-[10px] font-bold tracking-widest uppercase text-primary">Especialidad de Interés</label>
+                  <label className="text-[10px] font-bold tracking-widest uppercase text-primary">Seleccionar especialidad de interés</label>
                   <select className="border-b border-gray-200 bg-transparent py-3 text-sm outline-none transition-colors focus:border-accent appearance-none">
                     <option>Derecho Laboral</option>
                     <option>Seguridad Social</option>
@@ -355,9 +362,9 @@ export default function App() {
       </section>
 
       {/* Final Call Section */}
-      <section className="bg-navy-dark py-20 md:py-24 text-white">
+      <section className="bg-navy-dark py-20 md:py-12 text-white">
         <div className="mx-auto max-w-5xl px-6 md:px-10 text-center">
-          <h2 className="mb-4 font-serif text-2xl font-bold md:text-4xl leading-tight">Soluciones legales claras para su tranquilidad.</h2>
+          <h2 className="mb-4 font-serif text-2xl font-bold md:text-3xl leading-tight">ImAGine vivir el presente sin la carga de un conflicto legal.</h2>
           <p className="mb-10 md:mb-12 text-[10px] md:text-[17px] font-bold tracking-[0.3em] uppercase text-accent">Reserve su consulta de evaluación</p>
           <a
             href="#contacto"
@@ -371,7 +378,7 @@ export default function App() {
       {/* Footer */}
       <footer className="bg-navy-dark py-12 text-[10px] font-medium tracking-[0.1em] uppercase text-gray-500">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
-          <div className="flex flex-col items-center justify-between gap-8 border-t border-white/5 pt-12 md:flex-row">
+          <div className="flex flex-col items-center justify-between gap-8 border-t-2 border-white pt-3 md:flex-row">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-23 items-center justify-center rounded bg-accent">
                 <span className="font-serif text-lg font-bold text-primary">imAGine</span>
@@ -379,7 +386,7 @@ export default function App() {
               <p className="font-bold text-white tracking-widest">Rights</p>
             </div>
             <div className="flex gap-10">
-              <a href="#" className="hover:text-accent transition-colors">Aviso Legal</a>
+             
 
               <a
                 href="/imagine-asesoramiento/politica.html"
@@ -387,7 +394,7 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-[#D4AF37] text-[10px]"
               >
-                Política de Privacidad
+                Aviso Legal y Política de Privacidad
               </a>
             </div>
             <p>© 2026 imAGine by Ana. Todos los derechos reservados</p>
