@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   // Si vas a subirlo a una carpeta llamada imagine-asesoramiento, deja la base. 
   // Si es para verlo en tu PC, puedes poner solo '/'
-  base: '/imagine-asesoramiento/', 
+  base: '/imagine-asesoria-vigo/', 
   plugins: [
     react(),
     tailwindcss(),

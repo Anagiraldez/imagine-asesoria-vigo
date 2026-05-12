@@ -90,7 +90,7 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="relative bg-[#F4F4F4] pb-16 pt-28 lg:pb-32 lg:pt-48 overflow-hidden">
+      <section id="hero" className="relative bg-[#F4F4F4] pb-16 pt-40 overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
             {/* Lado Izquierdo: Propuesta de Valor */}
@@ -100,7 +100,7 @@ export default function App() {
               transition={{ duration: 0.8 }}
               className="flex flex-col items-start lg:pt-6 lg:border-r lg:border-gray-300 lg:pr-16"
             >
-              <div className="mb-4 text-[10px] md:text-[18px] font-bold tracking-[0.3em] uppercase text-accent">
+              <div className="mt-5 mb-2 text-[14px] md:text-[18px] font-bold tracking-[0.3em] uppercase text-accent">
                 Asesoramiento Jurídico
               </div>
               <h1 className="mb-6 md:mb-8 font-serif text-3xl font-bold leading-tight text-primary md:text-5xl xl:text-6xl break-words">
@@ -128,7 +128,7 @@ export default function App() {
                 href="https://wa.me/34613032762?text=Hola,%20me%20gustaría%20solicitar%20una%20consulta%20personalizada."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 md:mt-8 w-max bg-[#B8860B] px-8 md:px-10 py-4 md:py-5 text-[10px] md:text-[14px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#25D366] hover:shadow-2xl active:scale-95"
+                className="mt-4 bg-[#B8860B] px-6 py-3 text-[11px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#25D366] hover:shadow-2xl active:scale-95"
               >
                 Enviar mensaje
               </a>
@@ -141,7 +141,7 @@ export default function App() {
               transition={{ duration: 1, delay: 0.2 }}
               className="flex flex-col"
             >
-              <div className="relative w-64 mx-auto overflow-hidden rounded-sm border-[6px] md:border-[12px] border-white shadow-2xl">
+              <div className="relative w-60 mx-auto mt-10 overflow-hidden rounded-sm border-[px] md:border-[12px] border-white shadow-2xl">
                 <img
                   src="ana.jpg"
                   alt="Tu Fotografía Profesional"
@@ -184,65 +184,98 @@ export default function App() {
       </section>
 
       {/* Benefits Section */}
-      <section id="beneficios" className="bg-white py-20 md:py-24">
-        <div className="mx-auto max-w-7xl px-6 md:px-10">
-          <div className="mb-16 md:mb-20 grid md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
-            {[
-              {
-                id: "01.",
-                title: "Derecho Laboral",
-                desc: "Defensa en Materia de Despidos, Impugnación de Sanciones, Reclamaciones de Cantidad (Salarios, Horas Extras y Pluses), Acoso Laboral (Mobbing), Conciliación de la vida Personal, Familiar y Laboral, Vacaciones, Convenios Colectivos, Permisos, Modificaciones Sustanciales de Condiciones de Trabajo, Movilidad Geográfica, Teletrabajo, Representantes Legales de las Personas Trabajadoras, Vulneración de Derechos Fundamentales, etc."
-              },
-
-              {
-                id: "02.",
-                title: "Seguridad Social",
-                desc: "Impugnación de Altas Médicas, Reconocimiento de Incapacidad Permanente (Parcial,Total, Absoluta y Gran Invalidez), Determinación de Contingencia, Pensiones de Jubilación, Viudedad, Orfandad y Pensión a Favor de Familiares, Subsidios, Desempleo, Complemento Brecha Género, Reclamación Daños y Perjuicios, Nacimiento y Cuidado Menor, Riesgo durante Embarazo y Lactancia, Permisos Cuidado y Conciliación, Prestación Cuidado Menores con Cáncer o Enfermedad Grave, etc.  "
-              },
-              {
-                id: "03.",
-                title: "Extranjería",
-                desc: "REGULARIZACIÓN EXTRAORDINARIA 2026 (¡PLAZO ABIERTO HASTA EL 30 DE JUNIO!), Autorizaciones de Trabajo y Estancia, Residencia de Larga Duración, Residencia no Lucrativa, Familiar de Ciudadano de la UE, Nacionalidad, Reagrupación Familiar, Gestión de Arraigos (Social, Familiar, Laboral y para la Formación), Residencias por Circunstancias Excepcionales (Asilo y Razones Humanitarias),  "
-              }
-            ].map((benefit, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-justify"
-              >
-                <div className="mb-4 font-serif text-4xl italic text-accent opacity-50">{benefit.id}</div>
-                <h3 className="mb-4 text-s font-bold tracking-[0.2em] uppercase text-primary">{benefit.title}</h3>
-                <div className="mx-auto mb-6 h-px w-10 bg-accent/30" />
-                <p className="text-[15px] leading-relaxed text-gray-500">{benefit.desc}</p>
-              </motion.div>
+      <section id="beneficios" className="bg-white pt-10 py-10">
+       <div className="mx-auto max-w-7xl px-6 md:px-10">
+  <div className="mb-16 md:mb-20 grid md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
+    {[
+      {
+        id: "01.",
+        title: "Derecho Laboral",
+        services: [
+          "Defensa en Materia de Despidos",
+          "Impugnación de Sanciones",
+          "Reclamaciones de Cantidad",
+          "Modificaciones de Condiciones de Trabajo",
+          "Vulneración de Derechos Fundamentales",
+           "Daños y perjuicios",
+          "Acoso Laboral",
+          "Vacaciones",
+          "y más..."
+     
+        ]
+      },
+      {
+        id: "02.",
+        title: "Seguridad Social",
+        services: [
+          "Impugnación de Altas Médicas",
+          "Incapacidad Permanente",
+          "Jubilación, Viudedad y Orfandad",
+          "Complemento Brecha de Género",
+          "Nacimiento y Cuidado de Menor",
+          "Riesgo durante Embarazo y Lactancia",
+          "Subsidios",
+          "Desempleo",
+          "y más...",
+        ]
+      },
+      {
+        id: "03.",
+        title: "Extranjería",
+        services: [
+          "REGULARIZACIÓN EXTRAORDINARIA 2026",
+          "Autorizaciones de Trabajo y Estancia",
+          "Residencia Larga Duración y No Lucrativa",
+          "Familiar de Ciudadano de la UE",
+          "Reagrupación Familiar",
+          "Arraigos (Social, Laboral, etc.)",
+          "Asilo y Razones Humanitarias",
+           "Nacionalidad",
+           "y más..."
+        ]
+      }
+    ].map((benefit, idx) => (
+      <motion.div
+        key={idx}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="flex flex-col text-left" 
+      >
+        <div className="mb-4 font-serif text-4xl italic text-accent opacity-50">{benefit.id}</div>
+        <h3 className="mb-4 text-[14px] font-bold tracking-[0.2em] uppercase text-primary">{benefit.title}</h3>
+        <div className="mb-6 h-px w-10 bg-accent/30" />
+        
+        {/* Aquí es donde estaba el error: ahora recorremos 'services' */}
+        <ul className="space-y-3">
+          {benefit.services.map((item, sIdx) => (
+            <li key={sIdx} className="flex items-start gap-2 text-[13px] leading-relaxed text-gray-600">
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </motion.div>
             ))}
           </div>
 
-          <div className="text-center">
+          <div className="text-center mt-2 mb-5">
             <a
               href="#contacto"
-              className="inline-block bg-[#B8860B] px-10 py-4 text-[15px] font-bold tracking-widest uppercase text-white transition-all hover:bg-primary hover:text-white"
+              className="inline-block bg-[#B8860B] px-6 py-3 text-[11px] font-bold tracking-[0.2em] uppercase text-white transition-all hover:bg-primary hover:text-white"
             >
-              ¿No encuentra lo que busca? Envíe su duda.
+              ¿No encuentra lo que busca? Envíe su duda
             </a>
           </div>
         </div>
       </section>
 
-      {/* Authority Section */}
-      <section id="authority" className="bg-blue-200 py-12">
+      {/* TELÉFONO*/}
+      <section id="authority" className="bg-blue-200 mt-5 mb-0">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="flex flex-wrap items-center justify-center gap-10 md:gap-24">
-
             <div className="flex items-center gap-4">
-
               <span className="text-[#22c55e] flex items-center justify-center">
-
-
-
-                {/* Teléfono verde */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="29"
@@ -253,17 +286,15 @@ export default function App() {
                   <path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z" />
                 </svg>
               </span>
-
               <div className="h-10 w-px bg-black" />
-              <span className="text-[18px] font-bold tracking-[0.3em] uppercase text-blue">(+34) 613 032 762 <br />Consultas que no pueden esperar</span>
+              <span className="text-[18px] font-bold tracking-[0.2em] uppercase text-blue">(+34) 613 032 762</span>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* Social Proof (Testimonials) */}
-      <section id="testimonios" className="bg-[#F9F9F9] py-20 md:py-24">
+      {/* TESTIMONIOS */}
+      <section id="testimonios" className="bg-[#F9F9F9] py-16">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="mb-16 md:mb-20 text-center">
             <h2 className="mb-4 font-serif text-3xl font-bold text-primary"> Valoraciones</h2>
@@ -305,7 +336,7 @@ export default function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contacto" className="bg-white py-20 md:py-24">
+      <section id="contacto" className="bg-white py-18">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="grid gap-16 lg:grid-cols-2">
             <div>
@@ -345,7 +376,7 @@ export default function App() {
                     <p className="text-sm font-semibold text-primary">De Lunes a Viernes</p>
                     <p className="text-sm text-gray-700">9:00 a 14:00 horas</p>
                     <br />
-                    <p className="text-sm text-gray-700">🚨 Para su tranquilidad, atiendo fuera del horario habitual, ofreciéndole asistencia telefónica o reuniones presenciales según su necesidad.</p>
+                    <p className="text-sm text-gray-700">🚨 Atiendo fuera del horario habitual, según su necesidad, pida cita.</p>
                   </div>
                 </div>
               </div>
@@ -376,7 +407,7 @@ export default function App() {
                   <label className="text-[10px] font-bold tracking-widest uppercase text-primary">Mensaje</label>
                   <textarea rows={3} placeholder="Escriba su consulta aquí..." className="border-b border-gray-400 bg-transparent py-3 text-sm outline-none transition-colors focus:border-accent resize-none"></textarea>
                 </div>
-                <button type="submit" className="mt-4 w-fit px-10 mx-auto bg-[#1B263B] py-4 text-[11px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-blue-950/20 transition-all hover:bg-navy-dark">
+                <button type="submit" className="mt-4 w-fit px-6 mx-auto bg-[#1B263B] py-3 text-[11px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-blue-950/20 transition-all hover:bg-navy-dark">
                   Enviar Mensaje
                 </button>
               </form>
@@ -386,36 +417,37 @@ export default function App() {
       </section>
 
       {/* Final Call Section */}
-      <section className="bg-blue-200 py-10 md:py-10 text-blue">
+      <section className="bg-blue-200 pt-8 pb-0 md:py-10 text-blue">
         <div className="mx-auto max-w-5xl px-6 md:px-10 text-center">
           <h2 className="mb-4 font-serif text-2xl font-bold md:text-3xl leading-tight">ImAGine un futuro sin interrogantes.</h2>
-          <p className="mb-4 md:mb-12 text-[11px] md:text-[17px] font-bold tracking-[0.3em] uppercase text-accent">Reserve su consulta de asesoramiento</p>
+          <p className="mb-4 md:mb-12 text-[11px] md:text-[17px] font-bold tracking-[0.2em] uppercase text-accent">Reserve su consulta de asesoramiento</p>
            <a
                 href="https://wa.me/34613032762?text=Hola,%20me%20gustaría%20solicitar%20una%20consulta%20personalizada."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 md:mt-8 w-max bg-[#B8860B] px-6 md:px10 py-3 md:py-5 text-[12px] md:text-[14px] font-bold  uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#25D366] hover:shadow-2xl active:scale-95"
+                className="inline-block mb-0 bg-[#B8860B] px-6  py-3 text-[11px]  tracking-[0.2em] font-bold  uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#25D366] hover:shadow-2xl active:scale-95"
               >
               Necesito una cita
               </a>
         </div>
       </section>
+
       {/* Footer */}
-      <footer className="bg-blue-200 py-12 text-[10px] font-medium tracking-[0.1em] uppercase text-gray-500">
+      <footer className="bg-blue-200 py-4 text-[10px] tracking-[0.1em] uppercase text-gray-500">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
-          <div className="flex flex-col items-center justify-between gap-8 border-t-2 border-blue pt-3 md:flex-row">
+          <div className="flex flex-col items-center justify-between gap-2 border-t-2 border-blue pt-3 md:flex-row">
 
             <div className="flex items-center gap-3">
 
     
 
-              {/* RIGHTS*/}
+        
               <p className="font-bold text-blue tracking-widest">ALL YOUR RIGHTS</p>
             </div>
 
             <div className="flex gap-10">
               <a
-                href="/imagine-asesoramiento/politica.html"
+                href="/imagine-asesoria-vigo/politica.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-[#D4AF37] text-[11px]"
