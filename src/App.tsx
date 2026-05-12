@@ -28,44 +28,44 @@ export default function App() {
     <div id="app-container" className="min-h-screen bg-white font-sans text-primary">
       {/* Navbar */}
 
-   {/* Navbar */}
-<nav id="navbar" className="fixed top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
-  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-10 py-4">
-    
-    {/* Contenedor del Logo e Identidad */}
-    <div className="flex items-center gap-3 md:gap-4">
-      {/* El Logo Pequeño */}
-      <img 
-        src="logo.png" 
-        alt="Logo imAGine" 
-        className="h-25 w-auto object-contain" 
-      />
-      
-      {/* Texto de Marca */}
-      <div className="flex flex-col leading-none">
-        <span className="font-serif text-xl md:text-2xl font-bold tracking-tighter text-primary">
-          Im<span className="text-accent">AG</span>ine
-        </span>
-        <h1 className="text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase text-gray-400">
-          by Ana Giráldez
-        </h1>
-      </div>
-    </div>
+      {/* Navbar */}
+      <nav id="navbar" className="fixed top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-10 py-4">
 
-    {/* Menú Desktop */}
-    <div className="hidden items-center gap-10 text-[11px] font-bold tracking-[0.2em] uppercase md:flex">
-      <a href="#hero" className="text-accent hover:text-accent-hover transition-colors">Inicio</a>
-      <a href="#beneficios" className="text-primary hover:text-accent transition-colors">Servicios</a>
-      <a href="#testimonios" className="text-primary hover:text-accent transition-colors">Experiencia</a>
-      <a href="#contacto" className="border-b-2 border-accent pb-1 text-primary hover:text-accent transition-all">
-        Contacto
-      </a>
-    </div>
+          {/* Contenedor del Logo e Identidad */}
+          <div className="flex items-center gap-3 md:gap-4">
+            {/* El Logo Pequeño */}
+            <img
+              src="logo.png"
+              alt="Logo imAGine"
+              className="h-30 w-auto object-contain"
+            />
 
-    <button className="md:hidden text-primary" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-      {isMenuOpen ? <X /> : <Menu />}
-    </button>
-  </div>
+            {/* Texto de Marca */}
+            <div className="flex flex-col leading-none">
+              <span className="font-serif text-xl md:text-2xl font-bold tracking-tighter text-primary">
+                Im<span className="text-accent">AG</span>ine
+              </span>
+              <h1 className="text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase text-gray-400">
+                all your rights by ana giráldez
+              </h1>
+            </div>
+          </div>
+
+          {/* Menú Desktop */}
+          <div className="hidden items-center gap-10 text-[11px] font-bold tracking-[0.2em] uppercase md:flex">
+            <a href="#hero" className="text-accent hover:text-accent-hover transition-colors">Inicio</a>
+            <a href="#beneficios" className="text-primary hover:text-accent transition-colors">Servicios</a>
+            <a href="#testimonios" className="text-primary hover:text-accent transition-colors">Experiencia</a>
+            <a href="#contacto" className="border-b-2 border-accent pb-1 text-primary hover:text-accent transition-all">
+              Contacto
+            </a>
+          </div>
+
+          <button className="md:hidden text-primary" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
 
         {/* Mobile Menu */}
         <AnimatePresence>
@@ -98,7 +98,7 @@ export default function App() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="flex flex-col lg:pt-6"
+              className="flex flex-col items-start lg:pt-6 lg:border-r lg:border-gray-300 lg:pr-16"
             >
               <div className="mb-4 text-[10px] md:text-[18px] font-bold tracking-[0.3em] uppercase text-accent">
                 Asesoramiento Jurídico
@@ -113,9 +113,9 @@ export default function App() {
 
               <div className="mb-10 md:mb-12 space-y-4 md:space-y-5 text-justify">
                 {[
-                  "Defensa de disputas laborales y asesoramiento preventivo.",
-                  "Gestión de incapacidades, prestaciones y trámites ante la Seguridad Social.",
-                  "Soluciones en residencia y nacionalidad para garantizar estabilidad en España."
+                  "Resolución de conflictos de trabajo para recuperar su equilibrio profesional.",
+                  "Gestión estratégica de su futuro económico ante trámites de la Seguridad Social.",
+                  "Soluciones en residencia y nacionalidad para su estabilidad en España."
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <div className="h-1.5 w-1.5 rounded-full bg-accent" />
@@ -128,9 +128,9 @@ export default function App() {
                 href="https://wa.me/34613032762?text=Hola,%20me%20gustaría%20solicitar%20una%20consulta%20personalizada."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-16 mt-12 md:mt-18 w-max bg-[#25D366] px-8 md:px-10 py-4 md:py-5 text-[10px] md:text-[14px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#B8860B] hover:shadow-2xl active:scale-95"
+                className="mt-6 md:mt-8 w-max bg-[#B8860B] px-8 md:px-10 py-4 md:py-5 text-[10px] md:text-[14px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#25D366] hover:shadow-2xl active:scale-95"
               >
-                Solicite su consulta
+                Enviar mensaje
               </a>
             </motion.div>
 
@@ -158,14 +158,22 @@ export default function App() {
                 </div>
                 <p className="text-[12.5px] md:text-[13.5px] font-medium leading-[1.6] md:leading-[1.8] text-gray-600 italic text-justify">
 
-                  <p>Soy Ana Giráldez, Graduada Social especializada en Derecho Laboral, Seguridad Social y Extranjería.
-                    Mi práctica profesional abarca la intervención en procedimientos de despido, sanciones,
-                    reclamaciones de cantidad, tutela de derechos fundamentales, daños y perjuicios o denuncias ante la Inspección de Trabajo.
-                    Asimismo, cuento con experiencia en trámites en materia de la Seguridad Social
-                    como incapacidades y prestaciones, y en el ámbito de Extranjería en expedientes de arraigo, nacionalidad y residencia, entre otros.</p> <br />
-                  <p>Mi filosofía de trabajo es transformar la complejidad de la normativa en soluciones estratégicas y creo firmemente en un asesoramiento riguroso que no pierda de vista la cercanía humana.</p><br />
-                  <p>Si busca resolver tus desafíos con honestidad, estaré encantada de estudiar su caso.</p>
-
+                  <p>
+                    Soy Ana Giráldez, Graduada Social dedicada a la defensa integral en Derecho Laboral,
+                    Seguridad Social y Extranjería. Mi enfoque combina la solvencia técnica con una
+                    estrategia clara para resolver conflictos y asegurar la máxima protección de sus intereses.
+                  </p>
+                  <br />
+                  <p>
+                    Trabajo para personas trabajadoras, autónomos y empresas, transformando la
+                    complejidad legal en soluciones directas. Creo en un asesoramiento de confianza
+                    donde la precisión profesional siempre va de la mano de la cercanía humana.
+                  </p>
+                  <br />
+                  <p>
+                    Si busca resolver sus desafíos con honestidad y eficacia, estaré encantada
+                    de estudiar su caso personalmente.
+                  </p>
 
 
                 </p>
@@ -185,7 +193,7 @@ export default function App() {
                 title: "Derecho Laboral",
                 desc: "Defensa en Materia de Despidos, Impugnación de Sanciones, Reclamaciones de Cantidad (Salarios, Horas Extras y Pluses), Acoso Laboral (Mobbing), Conciliación de la vida Personal, Familiar y Laboral, Vacaciones, Convenios Colectivos, Permisos, Modificaciones Sustanciales de Condiciones de Trabajo, Movilidad Geográfica, Teletrabajo, Representantes Legales de las Personas Trabajadoras, Vulneración de Derechos Fundamentales, etc."
               },
-              
+
               {
                 id: "02.",
                 title: "Seguridad Social",
@@ -202,7 +210,7 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="text-justify"
               >
                 <div className="mb-4 font-serif text-4xl italic text-accent opacity-50">{benefit.id}</div>
                 <h3 className="mb-4 text-s font-bold tracking-[0.2em] uppercase text-primary">{benefit.title}</h3>
@@ -215,7 +223,7 @@ export default function App() {
           <div className="text-center">
             <a
               href="#contacto"
-              className="inline-block bg-[#D4AF37] px-10 py-4 text-[15px] font-bold tracking-widest uppercase text-primary transition-all hover:bg-primary hover:text-white"
+              className="inline-block bg-[#B8860B] px-10 py-4 text-[15px] font-bold tracking-widest uppercase text-white transition-all hover:bg-primary hover:text-white"
             >
               ¿No encuentra lo que busca? Envíe su duda.
             </a>
@@ -224,15 +232,32 @@ export default function App() {
       </section>
 
       {/* Authority Section */}
-      <section id="authority" className="bg-primary py-12">
+      <section id="authority" className="bg-blue-200 py-12">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="flex flex-wrap items-center justify-center gap-10 md:gap-24">
-          
+
             <div className="flex items-center gap-4">
-              <span className="font-serif text-4xl font-bold text-accent">☎️</span>
-              <div className="h-8 w-px bg-white/20" />
-              <span className="text-[15px] font-medium tracking-[0.2em] uppercase text-white/70">Atención urgente</span>
+
+              <span className="text-[#22c55e] flex items-center justify-center">
+
+
+
+                {/* Teléfono verde */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="29"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z" />
+                </svg>
+              </span>
+
+              <div className="h-10 w-px bg-black" />
+              <span className="text-[18px] font-medium tracking-[0.2em] uppercase text-blue">(+34) 613 032 762 <br />Consultas que no pueden esperar</span>
             </div>
+
           </div>
         </div>
       </section>
@@ -241,7 +266,7 @@ export default function App() {
       <section id="testimonios" className="bg-[#F9F9F9] py-20 md:py-24">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="mb-16 md:mb-20 text-center">
-            <h2 className="mb-4 font-serif text-3xl font-bold text-primary"> Valoraciones de clientes 🙂</h2>
+            <h2 className="mb-4 font-serif text-3xl font-bold text-primary"> Valoraciones</h2>
             <div className="mx-auto h-0.5 w-12 bg-accent" />
           </div>
 
@@ -284,8 +309,8 @@ export default function App() {
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="grid gap-16 lg:grid-cols-2">
             <div>
-              <div className="mb-4 text-[10px] md:text-[11px] font-bold tracking-[0.3em] uppercase text-accent">Contacto</div>
-              <h2 className="mb-6 md:mb-8 font-serif text-3xl md:text-4xl font-bold text-primary">Inicio su defensa</h2>
+              <div className="mb-4 text-[14px] md:text-[18px] font-bold tracking-[0.3em] uppercase text-accent">Contacto</div>
+              <h2 className="mb-6 md:mb-8 font-serif text-2xl md:text-4xl font-bold text-primary">¿Hablamos?</h2>
               <p className="text-justify mb-10 md:mb-12 text-sm leading-relaxed text-gray-500">Cada caso es único y merece una atención personalizada. Póngase en contacto para evaluar su situación jurídica con total confidencialidad.</p>
 
               <div className="space-y-6 md:space-y-8">
@@ -320,8 +345,7 @@ export default function App() {
                     <p className="text-sm font-semibold text-primary">De Lunes a Viernes</p>
                     <p className="text-sm text-gray-700">9:00 a 14:00 horas</p>
                     <br />
-                    <p className="text-sm text-gray-700">🚨 Fuera de horario, atiendo bajo cita previa.</p>
-                    <p className="text-sm text-gray-700">📞 Si tiene una urgencia, llame o envíe WhatsApp.</p>
+                    <p className="text-sm text-gray-700">🚨 Para su tranquilidad, atiendo fuera del horario habitual, ofreciéndole asistencia telefónica o reuniones presenciales según su necesidad.</p>
                   </div>
                 </div>
               </div>
@@ -362,41 +386,62 @@ export default function App() {
       </section>
 
       {/* Final Call Section */}
-      <section className="bg-navy-dark py-20 md:py-12 text-white">
+      <section className="bg-blue-200 py-10 md:py-10 text-blue">
         <div className="mx-auto max-w-5xl px-6 md:px-10 text-center">
-          <h2 className="mb-4 font-serif text-2xl font-bold md:text-3xl leading-tight">ImAGine vivir el presente sin la carga de un conflicto legal.</h2>
-          <p className="mb-10 md:mb-12 text-[10px] md:text-[17px] font-bold tracking-[0.3em] uppercase text-accent">Reserve su consulta de evaluación</p>
-          <a
-            href="#contacto"
-            className="inline-block bg-accent px-8 md:px-12 py-4 md:py-5 text-[10px] md:text-[14px] font-bold tracking-[0.3em] uppercase text-primary shadow-2xl transition-all hover:scale-105 hover:bg-accent-hover active:scale-95"
-          >
-            CONTACTAR
-          </a>
+          <h2 className="mb-4 font-serif text-2xl font-bold md:text-3xl leading-tight">ImAGine un futuro sin interrogantes.</h2>
+          <p className="mb-4 md:mb-12 text-[11px] md:text-[17px] font-bold tracking-[0.3em] uppercase text-accent">Reserve su consulta de asesoramiento</p>
+           <a
+                href="https://wa.me/34613032762?text=Hola,%20me%20gustaría%20solicitar%20una%20consulta%20personalizada."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 md:mt-8 w-max bg-[#B8860B] px-6 md:px10 py-3 md:py-5 text-[12px] md:text-[14px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#25D366] hover:shadow-2xl active:scale-95"
+              >
+              Sí, necesito una cita
+              </a>
         </div>
       </section>
-
       {/* Footer */}
-      <footer className="bg-navy-dark py-12 text-[10px] font-medium tracking-[0.1em] uppercase text-gray-500">
+      <footer className="bg-blue-200 py-12 text-[10px] font-medium tracking-[0.1em] uppercase text-gray-500">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
-          <div className="flex flex-col items-center justify-between gap-8 border-t-2 border-white pt-3 md:flex-row">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-23 items-center justify-center rounded bg-accent">
-                <span className="font-serif text-lg font-bold text-primary">imAGine</span>
-              </div>
-              <p className="font-bold text-white tracking-widest">Rights</p>
-            </div>
-            <div className="flex gap-10">
-             
+          <div className="flex flex-col items-center justify-between gap-8 border-t-2 border-blue pt-3 md:flex-row">
 
+            <div className="flex items-center gap-3">
+
+              <div className="flex h10 w-32 items-center justify-center rounded bg-white font-bold ">
+                <span className="font-serif tracking-tighter text-primary flex items-baseline">
+
+                  {/* IMAGINE*/}
+                  {/* La primera I mayúscula */}
+                  <span className="text-xl md:text-2xl">I</span>
+
+                  {/* Letra 'm' en negrita y minúscula */}
+                  <span className="text-xl md:text-2xl lowercase">m</span>
+
+                  {/* El núcleo "AG" en DORADO, MAYÚSCULAS y NEGRITA EXTREMA */}
+                  <span className="text-3xl md:text-4xl font-black uppercase text-accent px-0.5">
+                    AG
+                  </span>
+
+                  {/* El final 'ine' en negrita y minúscula */}
+                  <span className="text-xl md:text-2xl lowercase">ine</span>
+                </span>
+              </div>
+
+              {/* RIGHTS*/}
+              <p className="font-bold text-blue tracking-widest">ALL YOUR RIGHTS</p>
+            </div>
+
+            <div className="flex gap-10">
               <a
                 href="/imagine-asesoramiento/politica.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#D4AF37] text-[10px]"
+                className="text-gray-400 hover:text-[#D4AF37] text-[11px]"
               >
                 Aviso Legal y Política de Privacidad
               </a>
             </div>
+
             <p>© 2026 imAGine by Ana. Todos los derechos reservados</p>
           </div>
         </div>
