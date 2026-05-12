@@ -351,21 +351,21 @@ export default function App() {
               </div>
             </div>
 
-            <div className="bg-[#E7D4B5] p-7 md:p-10 border-[#B8860B] shadow-xl">
+            <div className="bg-[#F7E7CE] p-9 md:p-10  shadow-xl">
               <form className="grid gap-5 md:gap-6">
                 <div className="grid gap-5 md:gap-6 md:grid-cols-2">
                   <div className="flex flex-col gap-2">
                     <label className="text-[10px] font-bold tracking-widest uppercase text-primary">Nombre</label>
-                    <input type="text" className="border-b border-gray-200 bg-transparent py-3 text-sm outline-none transition-colors focus:border-accent" />
+                    <input type="text" className="border-b border-gray-400 bg-transparent py-3 text-sm outline-none transition-colors focus:border-accent" />
                   </div>
                   <div className="flex flex-col gap-2">
                     <label className="text-[10px] font-bold tracking-widest uppercase text-primary">Email</label>
-                    <input type="email" className="border-b border-gray-200 bg-transparent py-3 text-sm outline-none transition-colors focus:border-accent" />
+                    <input type="email" className="border-b border-gray-400 bg-transparent py-3 text-sm outline-none transition-colors focus:border-accent" />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className="text-[10px] font-bold tracking-widest uppercase text-primary">Seleccionar especialidad de interés</label>
-                  <select className="border-b border-gray-200 bg-transparent py-3 text-sm outline-none transition-colors focus:border-accent appearance-none">
+                  <select className="border-b border-gray-400 bg-transparent py-3 text-sm outline-none transition-colors focus:border-accent appearance-none">
                     <option>Derecho Laboral</option>
                     <option>Seguridad Social</option>
                     <option>Extranjería</option>
@@ -374,7 +374,7 @@ export default function App() {
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className="text-[10px] font-bold tracking-widest uppercase text-primary">Mensaje</label>
-                  <textarea rows={3} placeholder="Escriba su consulta aquí..." className="border-b border-gray-200 bg-transparent py-3 text-sm outline-none transition-colors focus:border-accent resize-none"></textarea>
+                  <textarea rows={3} placeholder="Escriba su consulta aquí..." className="border-b border-gray-400 bg-transparent py-3 text-sm outline-none transition-colors focus:border-accent resize-none"></textarea>
                 </div>
                 <button type="submit" className="mt-4 w-fit px-10 mx-auto bg-[#1B263B] py-4 text-[11px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-blue-950/20 transition-all hover:bg-navy-dark">
                   Enviar Mensaje
