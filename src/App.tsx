@@ -255,7 +255,7 @@ export default function App() {
               </span>
 
               <div className="h-10 w-px bg-black" />
-              <span className="text-[18px] font-medium tracking-[0.2em] uppercase text-blue">(+34) 613 032 762 <br />Consultas que no pueden esperar</span>
+              <span className="text-[18px] font-bold tracking-[0.3em] uppercase text-blue">(+34) 613 032 762 <br />Consultas que no pueden esperar</span>
             </div>
 
           </div>
@@ -351,7 +351,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="bg-[#FBFBF9] p-7 md:p-10 border border-gray-100 shadow-xl">
+            <div className="bg-[#E7D4B5] p-7 md:p-10 border-[#B8860B] shadow-xl">
               <form className="grid gap-5 md:gap-6">
                 <div className="grid gap-5 md:gap-6 md:grid-cols-2">
                   <div className="flex flex-col gap-2">
@@ -376,7 +376,7 @@ export default function App() {
                   <label className="text-[10px] font-bold tracking-widest uppercase text-primary">Mensaje</label>
                   <textarea rows={3} placeholder="Escriba su consulta aquí..." className="border-b border-gray-200 bg-transparent py-3 text-sm outline-none transition-colors focus:border-accent resize-none"></textarea>
                 </div>
-                <button type="submit" className="mt-4 bg-primary py-5 text-[11px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-blue-950/20 transition-all hover:bg-navy-dark">
+                <button type="submit" className="mt-4 w-fit px-10 mx-auto bg-[#1B263B] py-4 text-[11px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-blue-950/20 transition-all hover:bg-navy-dark">
                   Enviar Mensaje
                 </button>
               </form>
@@ -394,9 +394,9 @@ export default function App() {
                 href="https://wa.me/34613032762?text=Hola,%20me%20gustaría%20solicitar%20una%20consulta%20personalizada."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 md:mt-8 w-max bg-[#B8860B] px-6 md:px10 py-3 md:py-5 text-[12px] md:text-[14px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#25D366] hover:shadow-2xl active:scale-95"
+                className="mt-6 md:mt-8 w-max bg-[#B8860B] px-6 md:px10 py-3 md:py-5 text-[12px] md:text-[14px] font-bold  uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#25D366] hover:shadow-2xl active:scale-95"
               >
-              Sí, necesito una cita
+              Necesito una cita
               </a>
         </div>
       </section>
@@ -407,25 +407,7 @@ export default function App() {
 
             <div className="flex items-center gap-3">
 
-              <div className="flex h10 w-32 items-center justify-center rounded bg-white font-bold ">
-                <span className="font-serif tracking-tighter text-primary flex items-baseline">
-
-                  {/* IMAGINE*/}
-                  {/* La primera I mayúscula */}
-                  <span className="text-xl md:text-2xl">I</span>
-
-                  {/* Letra 'm' en negrita y minúscula */}
-                  <span className="text-xl md:text-2xl lowercase">m</span>
-
-                  {/* El núcleo "AG" en DORADO, MAYÚSCULAS y NEGRITA EXTREMA */}
-                  <span className="text-3xl md:text-4xl font-black uppercase text-accent px-0.5">
-                    AG
-                  </span>
-
-                  {/* El final 'ine' en negrita y minúscula */}
-                  <span className="text-xl md:text-2xl lowercase">ine</span>
-                </span>
-              </div>
+    
 
               {/* RIGHTS*/}
               <p className="font-bold text-blue tracking-widest">ALL YOUR RIGHTS</p>
