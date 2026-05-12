@@ -47,7 +47,7 @@ export default function App() {
                 Im<span className="text-accent">AG</span>ine
               </span>
               <h1 className="text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase text-gray-400">
-                all your rights by ana giráldez
+                all your rights by ana
               </h1>
             </div>
           </div>
@@ -424,7 +424,7 @@ export default function App() {
               </a>
             </div>
 
-            <p>© 2026 imAGine by Ana. Todos los derechos reservados</p>
+            <p>© 2026 imAGine. Todos los derechos reservados</p>
           </div>
         </div>
       </footer>
