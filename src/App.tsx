@@ -32,31 +32,21 @@ export default function App() {
       <nav id="navbar" className="fixed top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-10 py-4">
 
-          {/* Contenedor del Logo e Identidad */}
+          {/* Contenedor del Logo y menú */}
           <div className="flex items-center gap-3 md:gap-4">
-            {/* El Logo Pequeño */}
+
+            {/* El Logo */}
             <img
               src="logo.png"
               alt="Logo imAGine"
-              className="h-30 w-auto object-contain"
-            />
-
-            {/* Texto de Marca */}
-            <div className="flex flex-col leading-none">
-              <span className="font-serif text-xl md:text-2xl font-bold tracking-tighter text-primary">
-                Im<span className="text-accent">AG</span>ine
-              </span>
-              <h1 className="text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase text-gray-400">
-                all your rights by ana
-              </h1>
-            </div>
+              className="h-35 w-auto object-contain"/>
           </div>
 
           {/* Menú Desktop */}
           <div className="hidden items-center gap-10 text-[11px] font-bold tracking-[0.2em] uppercase md:flex">
             <a href="#hero" className="text-accent hover:text-accent-hover transition-colors">Inicio</a>
             <a href="#beneficios" className="text-primary hover:text-accent transition-colors">Servicios</a>
-            <a href="#testimonios" className="text-primary hover:text-accent transition-colors">Experiencia</a>
+            <a href="#testimonios" className="text-primary hover:text-accent transition-colors">Opiniones</a>
             <a href="#contacto" className="border-b-2 border-accent pb-1 text-primary hover:text-accent transition-all">
               Contacto
             </a>
@@ -79,7 +69,7 @@ export default function App() {
               <div className="flex flex-col gap-6 px-6 py-8 text-[11px] font-bold tracking-widest uppercase">
                 <a href="#hero" onClick={() => setIsMenuOpen(false)}>Inicio</a>
                 <a href="#beneficios" onClick={() => setIsMenuOpen(false)}>Servicios</a>
-                <a href="#testimonios" onClick={() => setIsMenuOpen(false)}>Experiencia</a>
+                <a href="#testimonios" onClick={() => setIsMenuOpen(false)}>Opiniones</a>
                 <a href="#contacto" onClick={() => setIsMenuOpen(false)} className="text-accent">
                   Contacto
                 </a>
@@ -90,7 +80,7 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="relative bg-[#F4F4F4] pb-16 pt-40 overflow-hidden">
+      <section id="hero" className="relative bg-[#F4F4F4] pb-16 pt-50 overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
             {/* Lado Izquierdo: Propuesta de Valor */}
@@ -128,10 +118,25 @@ export default function App() {
                 href="https://wa.me/34613032762?text=Hola,%20me%20gustaría%20solicitar%20una%20consulta%20personalizada."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 bg-[#B8860B] px-6 py-3 text-[11px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#25D366] hover:shadow-2xl active:scale-95"
+                aria-label="Enviar WhatsApp"
+                className="rounded-full items-center justify-center ml-40  bg-[#25D366]  p-6 text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#B8860B] hover:shadow-2xl active:scale-95"
               >
-                Enviar mensaje
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
               </a>
+
+
             </motion.div>
 
             {/* Lado Derecho: Identidad y Presentación */}
@@ -143,7 +148,7 @@ export default function App() {
             >
               <div className="relative w-60 mx-auto mt-10 overflow-hidden rounded-sm border-[px] md:border-[12px] border-white shadow-2xl">
                 <img
-                  src="ana.jpg"
+                  src="ana_giraldez_imagine_asesoria_vigo.jpg"
                   alt="Tu Fotografía Profesional"
                   className="aspect-[4/5] w-full object-cover grayscale transition-transform duration-700 hover:scale-105"
                   referrerPolicy="no-referrer"
@@ -185,77 +190,77 @@ export default function App() {
 
       {/* Benefits Section */}
       <section id="beneficios" className="bg-white pt-10 py-10">
-       <div className="mx-auto max-w-7xl px-6 md:px-10">
-  <div className="mb-16 md:mb-20 grid md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
-    {[
-      {
-        id: "01.",
-        title: "Derecho Laboral",
-        services: [
-          "Defensa en Materia de Despidos",
-          "Impugnación de Sanciones",
-          "Reclamaciones de Cantidad",
-          "Modificaciones de Condiciones de Trabajo",
-          "Vulneración de Derechos Fundamentales",
-           "Daños y perjuicios",
-          "Acoso Laboral",
-          "Vacaciones",
-          "y más..."
-     
-        ]
-      },
-      {
-        id: "02.",
-        title: "Seguridad Social",
-        services: [
-          "Impugnación de Altas Médicas",
-          "Incapacidad Permanente",
-          "Jubilación, Viudedad y Orfandad",
-          "Complemento Brecha de Género",
-          "Nacimiento y Cuidado de Menor",
-          "Riesgo durante Embarazo y Lactancia",
-          "Subsidios",
-          "Desempleo",
-          "y más...",
-        ]
-      },
-      {
-        id: "03.",
-        title: "Extranjería",
-        services: [
-          "REGULARIZACIÓN EXTRAORDINARIA 2026",
-          "Autorizaciones de Trabajo y Estancia",
-          "Residencia Larga Duración y No Lucrativa",
-          "Familiar de Ciudadano de la UE",
-          "Reagrupación Familiar",
-          "Arraigos (Social, Laboral, etc.)",
-          "Asilo y Razones Humanitarias",
-           "Nacionalidad",
-           "y más..."
-        ]
-      }
-    ].map((benefit, idx) => (
-      <motion.div
-        key={idx}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="flex flex-col text-left" 
-      >
-        <div className="mb-4 font-serif text-4xl italic text-accent opacity-50">{benefit.id}</div>
-        <h3 className="mb-4 text-[14px] font-bold tracking-[0.2em] uppercase text-primary">{benefit.title}</h3>
-        <div className="mb-6 h-px w-10 bg-accent/30" />
-        
-        {/* Aquí es donde estaba el error: ahora recorremos 'services' */}
-        <ul className="space-y-3">
-          {benefit.services.map((item, sIdx) => (
-            <li key={sIdx} className="flex items-start gap-2 text-[13px] leading-relaxed text-gray-600">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </motion.div>
+        <div className="mx-auto max-w-7xl px-6 md:px-10">
+          <div className="mb-16 md:mb-20 grid md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
+            {[
+              {
+                id: "01.",
+                title: "Derecho Laboral",
+                services: [
+                  "Defensa en Materia de Despidos",
+                  "Impugnación de Sanciones",
+                  "Reclamaciones de Cantidad",
+                  "Modificaciones de Condiciones de Trabajo",
+                  "Vulneración de Derechos Fundamentales",
+                  "Daños y perjuicios",
+                  "Acoso Laboral",
+                  "Vacaciones",
+                  "y más..."
+
+                ]
+              },
+              {
+                id: "02.",
+                title: "Seguridad Social",
+                services: [
+                  "Impugnación de Altas Médicas",
+                  "Incapacidad Permanente",
+                  "Jubilación, Viudedad y Orfandad",
+                  "Complemento Brecha de Género",
+                  "Nacimiento y Cuidado de Menor",
+                  "Riesgo durante Embarazo y Lactancia",
+                  "Subsidios",
+                  "Desempleo",
+                  "y más...",
+                ]
+              },
+              {
+                id: "03.",
+                title: "Extranjería",
+                services: [
+                  "REGULARIZACIÓN EXTRAORDINARIA 2026",
+                  "Autorizaciones de Trabajo y Estancia",
+                  "Residencia Larga Duración y No Lucrativa",
+                  "Familiar de Ciudadano de la UE",
+                  "Reagrupación Familiar",
+                  "Arraigos (Social, Laboral, etc.)",
+                  "Asilo y Razones Humanitarias",
+                  "Nacionalidad",
+                  "y más..."
+                ]
+              }
+            ].map((benefit, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="flex flex-col text-left"
+              >
+                <div className="mb-4 font-serif text-4xl italic text-accent opacity-50">{benefit.id}</div>
+                <h3 className="mb-4 text-[14px] font-bold tracking-[0.2em] uppercase text-primary">{benefit.title}</h3>
+                <div className="mb-6 h-px w-10 bg-accent/30" />
+
+                {/* Aquí es donde estaba el error: ahora recorremos 'services' */}
+                <ul className="space-y-3">
+                  {benefit.services.map((item, sIdx) => (
+                    <li key={sIdx} className="flex items-start gap-2 text-[13px] leading-relaxed text-gray-600">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
             ))}
           </div>
 
@@ -376,7 +381,7 @@ export default function App() {
                     <p className="text-sm font-semibold text-primary">De Lunes a Viernes</p>
                     <p className="text-sm text-gray-700">9:00 a 14:00 horas</p>
                     <br />
-                    <p className="text-sm text-gray-700">🚨 Atiendo fuera del horario habitual, según su necesidad, pida cita.</p>
+                    <p className="text-sm text-gray-700">🚨 Flexibilidad fuera del horario habitual, bajo cita previa.</p>
                   </div>
                 </div>
               </div>
@@ -421,14 +426,14 @@ export default function App() {
         <div className="mx-auto max-w-5xl px-6 md:px-10 text-center">
           <h2 className="mb-4 font-serif text-2xl font-bold md:text-3xl leading-tight">ImAGine un futuro sin interrogantes.</h2>
           <p className="mb-4 md:mb-12 text-[11px] md:text-[17px] font-bold tracking-[0.2em] uppercase text-accent">Reserve su consulta de asesoramiento</p>
-           <a
-                href="https://wa.me/34613032762?text=Hola,%20me%20gustaría%20solicitar%20una%20consulta%20personalizada."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mb-0 bg-[#B8860B] px-6  py-3 text-[11px]  tracking-[0.2em] font-bold  uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#25D366] hover:shadow-2xl active:scale-95"
-              >
-              Necesito una cita
-              </a>
+
+          <a
+            href="https://calendly.com/anaggsocial/30min" // 
+            rel="noopener noreferrer"
+            className="inline-block mb-0 bg-[#B8860B] px-6 py-3 text-[11px] tracking-[0.2em] font-bold uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#996515] hover:shadow-2xl active:scale-95"
+          >
+            Agendar consulta
+          </a>
         </div>
       </section>
 
@@ -439,9 +444,9 @@ export default function App() {
 
             <div className="flex items-center gap-3">
 
-    
 
-        
+
+
               <p className="font-bold text-blue tracking-widest">ALL YOUR RIGHTS</p>
             </div>
 
