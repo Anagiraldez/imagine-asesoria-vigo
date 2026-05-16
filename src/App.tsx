@@ -119,7 +119,7 @@ export default function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Enviar WhatsApp"
-                className="rounded-full items-center justify-center ml-40  bg-[#25D366]  p-6 text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#B8860B] hover:shadow-2xl active:scale-95"
+                className="rounded-full items-center justify-center ml-39 mt-5 mb-0  bg-[#25D366]  p-7 text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#B8860B] hover:shadow-2xl active:scale-95"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
