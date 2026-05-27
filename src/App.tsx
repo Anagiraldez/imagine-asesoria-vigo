@@ -413,8 +413,8 @@ export default function App() {
                   <label className="text-[10px] font-bold tracking-widest uppercase text-primary">Mensaje</label>
                   <textarea rows={3} placeholder="Escriba su consulta aquí..." className="border-b border-gray-400 bg-transparent py-3 text-sm outline-none transition-colors focus:border-accent resize-none"></textarea>
                 </div>
-                <button type="submit" className="mt-4 w-fit px-6 mx-auto bg-[#1B263B] py-3 text-[11px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-blue-950/20 transition-all hover:bg-navy-dark">
-                  Enviar Mensaje
+                <button type="submit" className="mt-4 w-fit px-9 mx-auto bg-[#1B263B] py-3 text-[11px] font-bold tracking-[0.2em] uppercase text-white shadow-xl shadow-blue-950/20 transition-all hover:bg-navy-dark">
+                  Enviar
                 </button>
               </form>
             </div>
@@ -431,7 +431,7 @@ export default function App() {
           <a
             href="https://calendly.com/anaggsocial/30min" // 
             rel="noopener noreferrer"
-            className="inline-block mb-0 bg-[#B8860B] px-6 py-3 text-[11px] tracking-[0.2em] font-bold uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#996515] hover:shadow-2xl active:scale-95"
+            className="inline-block mb-0 bg-[#B8860B] px-4 py-3 text-[11px] tracking-[0.2em] font-bold uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#996515] hover:shadow-2xl active:scale-95"
           >
             Sí, reservar
           </a>
