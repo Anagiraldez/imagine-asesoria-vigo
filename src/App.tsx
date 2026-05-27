@@ -39,8 +39,34 @@ export default function App() {
             <img
               src="logo.png"
               alt="Logo imAGine"
-              className="h-35 w-auto object-contain"/>
+              className="h-40 w-auto object-contain" />
           </div>
+
+
+          <a
+            href="https://wa.me/34613032762?text=Hola,%20me%20gustaría%20solicitar%20una%20consulta%20personalizada."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Enviar WhatsApp"
+            className="flex items-center justify-center gap-2 mx-auto w-fit bg-[#25D366] px-5 py-3 rounded-full text-white shadow-xl transition-all hover:bg-[#B8860B] hover:shadow-2xl active:scale-95 mt-5 mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span className="text-xs font-semibold">¿Hablamos?</span>
+          </a>
+
+
 
           {/* Menú Desktop */}
           <div className="hidden items-center gap-10 text-[11px] font-bold tracking-[0.2em] uppercase md:flex">
@@ -52,8 +78,8 @@ export default function App() {
             </a>
           </div>
 
-          <button className="md:hidden text-primary" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X /> : <Menu />}
+          <button className="md:hidden text-primary p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X size={40} /> : <Menu size={40} />}
           </button>
         </div>
 
@@ -66,7 +92,7 @@ export default function App() {
               exit={{ opacity: 0, height: 0 }}
               className="border-b border-gray-100 bg-white md:hidden overflow-hidden"
             >
-              <div className="flex flex-col gap-6 px-6 py-8 text-[11px] font-bold tracking-widest uppercase">
+              <div className="flex flex-col  gap-6 px-6 py-8 text-[11px] font-bold tracking-widest uppercase">
                 <a href="#hero" onClick={() => setIsMenuOpen(false)}>Inicio</a>
                 <a href="#beneficios" onClick={() => setIsMenuOpen(false)}>Servicios</a>
                 <a href="#testimonios" onClick={() => setIsMenuOpen(false)}>Opiniones</a>
@@ -90,22 +116,20 @@ export default function App() {
               transition={{ duration: 0.8 }}
               className="flex flex-col items-start lg:pt-6 lg:border-r lg:border-gray-300 lg:pr-16"
             >
-              <div className="mt-5 mb-2 text-[14px] md:text-[18px] font-bold tracking-[0.3em] uppercase text-accent">
-                Asesoramiento Jurídico
+              <div className="mt-5 mb-5 text-[12px] md:text-[18px] font-bold tracking-[0.3em] uppercase text-accent">
+                ImAGine un nuevo escenario legal
               </div>
               <h1 className="mb-6 md:mb-8 font-serif text-3xl font-bold leading-tight text-primary md:text-5xl xl:text-6xl break-words">
                 Derecho Laboral, Seguridad Social y Extranjería
               </h1>
               <p className="mb-8 md:mb-10 max-w-lg border-l-2 border-accent pl-6 text-sm leading-relaxed text-gray-600">
-                Para personas trabajadoras, empresas y personas extranjeras.
-                <br />Soluciones claras, eficaces y adaptadas a cada caso.
-              </p>
+                Soluciones jurídicas para el ámbito laboral, empresarial y para la ciudadanía extranjera.             </p>
 
-              <div className="mb-10 md:mb-12 space-y-4 md:space-y-5 text-justify">
+              <div className="mb-10 md:mb-8 space-y-8 md:space-y-10 text-justify">
                 {[
-                  "Resolución de conflictos de trabajo para recuperar su equilibrio profesional.",
-                  "Gestión estratégica de su futuro económico ante trámites de la Seguridad Social.",
-                  "Soluciones en residencia y nacionalidad para su estabilidad en España."
+                  "Defensa de sus derechos laborales ante despidos, reclamaciones de cantidad, sanciones o acoso laboral, entre otros temas de su interés, protegiendo su equilibrio profesional con soluciones justas.",
+                  "Asesoramiento estratégico para empresas y autónomos garantizando la seguridad jurídica en la toma de decisiones críticas.",
+                  "Gestión integral de extranjería: desde autorizaciones de trabajo, estancias y residencias, hasta procesos de nacionalidad. Acompañamiento personalizado en cada etapa de su regularización en España."
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <div className="h-1.5 w-1.5 rounded-full bg-accent" />
@@ -114,27 +138,6 @@ export default function App() {
                 ))}
               </div>
 
-              <a
-                href="https://wa.me/34613032762?text=Hola,%20me%20gustaría%20solicitar%20una%20consulta%20personalizada."
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Enviar WhatsApp"
-                className="rounded-full items-center justify-center ml-39 mt-5 mb-0  bg-[#25D366]  p-7 text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#B8860B] hover:shadow-2xl active:scale-95"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-              </a>
 
 
             </motion.div>
@@ -146,11 +149,11 @@ export default function App() {
               transition={{ duration: 1, delay: 0.2 }}
               className="flex flex-col"
             >
-              <div className="relative w-60 mx-auto mt-10 overflow-hidden rounded-sm border-[px] md:border-[12px] border-white shadow-2xl">
+              <div className="relative w-40 mx-auto -mt-12 md:mt-12 overflow-hidden rounded-sm border-[px] md:border-[12px] border-white shadow-2xl">
                 <img
                   src="ana_giraldez_imagine_asesoria_vigo.jpg"
-                  alt="Tu Fotografía Profesional"
-                  className="aspect-[4/5] w-full object-cover grayscale transition-transform duration-700 hover:scale-105"
+                  alt="retrato"
+                  className="aspect-[4/5]  w-full object-cover grayscale transition-transform duration-700 hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
@@ -164,15 +167,13 @@ export default function App() {
                 <p className="text-[12.5px] md:text-[13.5px] font-medium leading-[1.6] md:leading-[1.8] text-gray-600 italic text-justify">
 
                   <p>
-                    Soy Ana Giráldez, Graduada Social dedicada a la defensa integral en Derecho Laboral,
-                    Seguridad Social y Extranjería. Mi enfoque combina la solvencia técnica con una
-                    estrategia clara para resolver conflictos y asegurar la máxima protección de sus intereses.
+                    Soy Ana Giráldez. Como Graduada Social, mi misión es clara: aportar rigor técnico y una estrategia precisa para resolver conflictos y proteger los intereses de empresas, trabajadores y personas extranjeras, transformando la complejidad normativa en resultados tangibles.
+
+
                   </p>
                   <br />
                   <p>
-                    Trabajo para personas trabajadoras, autónomos y empresas, transformando la
-                    complejidad legal en soluciones directas. Creo en un asesoramiento de confianza
-                    donde la precisión profesional siempre va de la mano de la cercanía humana.
+                    La base de mi trabajo es un asesoramiento con cercanía que permita comprender el contexto de cada situación; por ello, defiendo un modelo de asesoramiento basado en la confianza mutua, donde la solvencia profesional y la proximidad constituyen los pilares de mi trabajo diario. Entiendo que detrás de cada conflicto o trámite hay un proyecto de vida o una decisión empresarial trascendental, la clave para ofrecer soluciones que no solo sean jurídicamente impecables, sino también coherentes con las necesidades de quienes confían en mí.
                   </p>
                   <br />
                   <p>
@@ -379,15 +380,15 @@ export default function App() {
                   <div>
                     <p className="text-[10px] font-bold tracking-widest uppercase text-gray-400">Horario</p>
                     <p className="text-sm font-semibold text-primary">De Lunes a Viernes</p>
-                    <p className="text-sm text-gray-700">9:00 a 14:00 horas</p>
+                    <p className="text-sm text-gray-700"> De 9:00 a 14:00 horas</p>
                     <br />
-                    <p className="text-sm text-gray-700">🚨 Flexibilidad fuera del horario habitual, bajo cita previa.</p>
+                    <p className="text-sm text-gray-700">🚨 Por las tardes, bajo cita previa.</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-[#F7E7CE] p-9 md:p-10  shadow-xl">
+            <div className="bg-[#FDF6E3] p-9 md:p-10  shadow-xl">
               <form className="grid gap-5 md:gap-6">
                 <div className="grid gap-5 md:gap-6 md:grid-cols-2">
                   <div className="flex flex-col gap-2">
@@ -400,12 +401,12 @@ export default function App() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label className="text-[10px] font-bold tracking-widest uppercase text-primary">Seleccionar especialidad de interés</label>
+                  <label className="text-[10px] font-bold tracking-widest uppercase text-primary">Seleccionar especialidad de interés ⬇️</label>
                   <select className="border-b border-gray-400 bg-transparent py-3 text-sm outline-none transition-colors focus:border-accent appearance-none">
-                    <option>Derecho Laboral</option>
-                    <option>Seguridad Social</option>
-                    <option>Extranjería</option>
-                    <option>Otros Asuntos</option>
+                    <option>Consulta sobre Laboral</option>
+                    <option>Consulta sobre Seguridad Social</option>
+                    <option>COnsulta sobre Extranjería</option>
+                    <option>Otro tema</option>
                   </select>
                 </div>
                 <div className="flex flex-col gap-2">
@@ -424,7 +425,7 @@ export default function App() {
       {/* Final Call Section */}
       <section className="bg-blue-200 pt-8 pb-0 md:py-10 text-blue">
         <div className="mx-auto max-w-5xl px-6 md:px-10 text-center">
-          <h2 className="mb-4 font-serif text-2xl font-bold md:text-3xl leading-tight">ImAGine un futuro sin interrogantes.</h2>
+          <h2 className="mb-4 font-serif text-2xl font-bold md:text-3xl leading-tight">ImAGine la tranquilidad de tener el control.</h2>
           <p className="mb-4 md:mb-12 text-[11px] md:text-[17px] font-bold tracking-[0.2em] uppercase text-accent">Reserve su consulta de asesoramiento</p>
 
           <a
@@ -432,7 +433,7 @@ export default function App() {
             rel="noopener noreferrer"
             className="inline-block mb-0 bg-[#B8860B] px-6 py-3 text-[11px] tracking-[0.2em] font-bold uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#996515] hover:shadow-2xl active:scale-95"
           >
-            Agendar consulta
+            Sí, la necesito
           </a>
         </div>
       </section>
@@ -447,7 +448,6 @@ export default function App() {
 
 
 
-              <p className="font-bold text-blue tracking-widest">ALL YOUR RIGHTS</p>
             </div>
 
             <div className="flex gap-10">
@@ -455,13 +455,15 @@ export default function App() {
                 href="/imagine-asesoria-vigo/politica.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#D4AF37] text-[11px]"
+                className="text-gray-600 hover:text-[#D4AF37] text-[11px]"
               >
                 Aviso Legal y Política de Privacidad
               </a>
             </div>
 
-            <p>© 2026 imAGine. Todos los derechos reservados</p>
+            <p className="text-blue-900 font-bold">
+  © 2026 imAGine. Todos los derechos reservados
+</p>
           </div>
         </div>
       </footer>
