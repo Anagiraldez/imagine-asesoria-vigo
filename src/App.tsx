@@ -405,7 +405,7 @@ export default function App() {
                   <select className="border-b border-gray-400 bg-transparent py-3 text-sm outline-none transition-colors focus:border-accent appearance-none">
                     <option>Consulta sobre Laboral</option>
                     <option>Consulta sobre Seguridad Social</option>
-                    <option>COnsulta sobre Extranjería</option>
+                    <option>Consulta sobre Extranjería</option>
                     <option>Otro tema</option>
                   </select>
                 </div>
@@ -425,7 +425,7 @@ export default function App() {
       {/* Final Call Section */}
       <section className="bg-blue-200 pt-8 pb-0 md:py-10 text-blue">
         <div className="mx-auto max-w-5xl px-6 md:px-10 text-center">
-          <h2 className="mb-4 font-serif text-2xl font-bold md:text-3xl leading-tight">ImAGine la tranquilidad de tener el control.</h2>
+          <h2 className="mb-4 font-serif text-2xl font-bold md:text-3xl leading-tight">ImAGine la tranquilidad de tener el control</h2>
           <p className="mb-4 md:mb-12 text-[11px] md:text-[17px] font-bold tracking-[0.2em] uppercase text-accent">Reserve su consulta de asesoramiento</p>
 
           <a
@@ -433,7 +433,7 @@ export default function App() {
             rel="noopener noreferrer"
             className="inline-block mb-0 bg-[#B8860B] px-6 py-3 text-[11px] tracking-[0.2em] font-bold uppercase text-white shadow-xl shadow-yellow-900/20 transition-all hover:bg-[#996515] hover:shadow-2xl active:scale-95"
           >
-            Sí, la necesito
+            Sí, reservar
           </a>
         </div>
       </section>
