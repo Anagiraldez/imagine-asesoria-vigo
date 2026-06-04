@@ -190,7 +190,7 @@ export default function App() {
       </section>
 
       {/* Benefits Section */}
-      <section id="beneficios" className="bg-white pt-10 py-10">
+      <section id="beneficios" className="scroll-mt-40 bg-white pt-10 py-10">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="mb-16 md:mb-20 grid md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
             {[
@@ -300,7 +300,7 @@ export default function App() {
       </section>
 
       {/* TESTIMONIOS */}
-      <section id="testimonios" className="bg-[#F9F9F9] py-16">
+      <section id="testimonios" className="scroll-mt-35 bg-[#F9F9F9] py-16">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="mb-16 md:mb-20 text-center">
             <h2 className="mb-4 font-serif text-3xl font-bold text-primary"> Valoraciones</h2>
@@ -342,7 +342,7 @@ export default function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contacto" className="bg-white py-18">
+      <section id="contacto" className="scroll-mt-35 bg-white py-18">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="grid gap-16 lg:grid-cols-2">
             <div>
