@@ -367,22 +367,15 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <MapPin className="mt-1 h-5 w-5 text-accent" />
-                  <div>
-                    <p className="text-[10px] font-bold tracking-widest uppercase text-gray-400">Despacho</p>
-                    <p className="text-sm font-semibold text-primary">C/República Argentina 2, piso 3º, of. 32. Vigo-Pontevedra</p>
-                  </div>
-                </div>
+          
 
                 <div className="flex items-start gap-4">
                   <MapPin className="mt-1 h-5 w-5 text-accent" />
                   <div>
                     <p className="text-[10px] font-bold tracking-widest uppercase text-gray-400">Horario</p>
                     <p className="text-sm font-semibold text-primary">De Lunes a Viernes</p>
-                    <p className="text-sm text-gray-700"> De 9:00 a 14:00 horas</p>
-                    <br />
-                    <p className="text-sm text-gray-700">🚨 Por las tardes, bajo cita previa.</p>
+                    <p className="text-sm text-gray-700"> 🚨 De 9:00 a 18:00 horas. Cita previa.</p>
+                  
                   </div>
                 </div>
               </div>
