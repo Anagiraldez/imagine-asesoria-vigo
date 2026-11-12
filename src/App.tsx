@@ -436,9 +436,24 @@ export default function App() {
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="flex flex-col items-center justify-between gap-2 border-t-2 border-blue pt-3 md:flex-row">
 
+      {/* FINANCIADO POR LA UE */}
             <div className="flex items-center gap-3">
 
-
+<span className="text-[9px] font-semibold text-gray-600 tracking-normal">
+  PROYECTO COFINANCIADO POR:
+</span>
+<div className="flex flex-wrap items-center justify-center gap-6 bg-white/70 px-4 py-2 rounded-xl border border-blue-100 shadow-sm">
+  <img 
+    src="UE.jpg" 
+    alt="Financiado por la Unión Europea - NextGenerationEU" 
+    className="h-8 md:h-10 object-contain" 
+  />
+  <img 
+    src="XUNTA.jpg" 
+    alt="Xunta de Galicia" 
+    className="h-8 md:h-10 object-contain" 
+  />
+</div>
 
 
             </div>
